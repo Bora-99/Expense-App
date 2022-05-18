@@ -1,0 +1,30 @@
+
+.checkbox-container label {
+cursor: pointer;
+display: flex;
+
+}
+
+.checkbox-container input[type='checkbox'] {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-container label::before{
+    content:'' ;
+    width: 1em;
+    height: 1em;
+    border: .1em solid rgb(160, 19, 19);
+    margin-right: .5em;
+    border-radius: .15em;
+}
+
+.checkbox-container input[type='checkbox']:checked + label::before {
+    content: "\002714";
+    background-color:aliceblue  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(34, 21, 143);
+}
